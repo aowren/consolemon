@@ -1,7 +1,4 @@
 public class Pokemon {
-
-    Moves moveset = new Moves();
-
     String name;
     int HP;
     String player;

@@ -1,12 +1,23 @@
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Moves {
 
+
+    private String moveName;
     private int damage;
     private int healthGain;
     private int accuracy;
 
-    public void razorLeaf() {
-        damage = 55;
-        accuracy = 100;
+    public Moves(String moveName, int damage, int accuracy) {
+        this.moveName = moveName;
+        this.damage = damage;
+        this.accuracy = accuracy;
+    }
+
+    public void razorLeaf(int damage, int accuracy) {
+        this.damage = damage;
+        this.accuracy = accuracy;
     }
 
     public void leechSeed() {
@@ -21,9 +32,9 @@ public class Moves {
         // for each turn damage = 10
     }
 
-    public void flamethrower() {
-        damage = 70;
-        accuracy = 90;
+    public void flamethrower(int damage, int accuracy) {
+        this.damage = damage;
+        this.accuracy = accuracy;
     }
 
     public void fly() {
@@ -34,6 +45,19 @@ public class Moves {
     public void dragonClaw() {
         damage = 40;
         accuracy = 100;
+    }
+
+    public int getDamage() {
+        return this.damage;
+    }
+
+    public boolean calculateAccuracy() {
+
+        if ((Math.random() * 100) < this.accuracy) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
