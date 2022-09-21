@@ -22,10 +22,13 @@ public class GameLoop {
         Moves razorLeaf = new Moves("Razor Leaf", 55, 100);
         Moves flamethrower = new Moves("Flamethrower", 80, 70);
 
+        Sprites sprites = new Sprites();
 
         while (player1Turn) {
 
-            System.out.println("Go, " + pokemon1.name + "!");
+            System.out.println(sprites.venusaurSprite);
+
+            //System.out.println("Go, " + pokemon1.name + "!");
 
             BattleMenu battleMenu1 = new BattleMenu();
             battleMenu1.menu(pokemon1.name, pokemon1.HP, pokemon1.player);
@@ -49,10 +52,15 @@ public class GameLoop {
         }
 
         while (player2Turn) {
-            String input = scan.next();
+
+            System.out.println(sprites.charizardSprite);
+            //System.out.println("Go, " + pokemon2.name + "!");
 
             BattleMenu battleMenu2 = new BattleMenu();
             battleMenu2.menu(pokemon2.name, pokemon2.HP, pokemon2.player);
+
+            String input = scan.next();
+            scan.nextLine();
 
             flamethrower.flamethrower(80, 70);
 

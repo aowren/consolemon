@@ -4,7 +4,6 @@ public class BattleMenu {
         System.out.println("| "+player+"            |");
         System.out.println("| "+name+"              |");
         System.out.println("| HP:"+ HP +"           |");
-        System.out.println("|                       |");
         System.out.println("+-----------------------+");
     }
 }

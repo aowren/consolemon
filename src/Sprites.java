@@ -1,62 +1,6 @@
 public class Sprites {
 
-
-
-
-
-public String healthBar = "==========";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   public String venusaur = "    _._       _,._\n" +
+   public String venusaurSprite = "    _._       _,._\n" +
             "                        _.'   `. ' .'   _`.\n" +
             "                ,\"\"\"/`\"\"-.-.,/. ` V'\\-,`.,--/\"\"\".\"-..\n" +
             "              ,'    `...,' . ,\\-----._|     `.   /   \\\n" +
@@ -89,10 +33,7 @@ public String healthBar = "==========";
             "              \\_/\"\"\"-'                           `-'--(_,`\"`-` mh";
 
 
-
-
-
-   public String charizard = "                 .\"-,.__\n" +
+   public String charizardSprite = "                 .\"-,.__\n" +
            "                 `.     `.  ,\n" +
            "              .--'  .._,'\"-' `.\n" +
            "             .    .'         `'\n" +
@@ -131,6 +72,5 @@ public String healthBar = "==========";
            "                .'        /\"'          |  \"'   '_\n" +
            "               /_|.-'\\ ,\".             '.'`__'-( \\\n" +
            "                 / ,\"'\"\\,'               `/  `-.|\" mh";
-
 
 }

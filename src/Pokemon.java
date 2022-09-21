@@ -8,6 +8,7 @@ public class Pokemon {
         this.name = name;
         this.HP = HP;
         this.player = player;
+        this.sprite = sprite;
     }
 
     // Pokemon Object
