@@ -15,7 +15,5 @@ public class MovesTest {
         Moves zeroChance = new Moves("Zero Chance", 100, 0);
         assertEquals(false, zeroChance.calculateAccuracy());
 
-       /* Moves flamethrower = new Moves("Flamethrower", 80, 10);
-        assertEquals(true, flamethrower.calculateAccuracy());*/
     }
 }
