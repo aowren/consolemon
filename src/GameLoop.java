@@ -3,14 +3,15 @@ import java.util.Scanner;
 
 public class GameLoop {
 
-    Scanner scan = new Scanner(System.in);
-    String input = scan.next();
+    boolean player1Turn = true;
+    boolean player2Turn = false;
 
-    private boolean player1Turn = true;
-    private boolean player2Turn = false;
+
     public void startBattle() {
 
-        System.out.println("Press Enter to Battle");
+        System.out.println("Press ENTER to Battle!");
+
+        Scanner scan = new Scanner(System.in);
         scan.nextLine();
 
         // Create pokemon objects
@@ -19,49 +20,54 @@ public class GameLoop {
 
         // Create move objects
         Moves razorLeaf = new Moves("Razor Leaf", 55, 100);
-        Moves move2 = new Moves("Flamethrower", 80, 70);
-
-        // Accurracy
+        Moves flamethrower = new Moves("Flamethrower", 80, 70);
 
 
         while (player1Turn) {
+
+            System.out.println("Go, " + pokemon1.name + "!");
+
             BattleMenu battleMenu1 = new BattleMenu();
             battleMenu1.menu(pokemon1.name, pokemon1.HP, pokemon1.player);
 
-            razorLeaf.razorLeaf(55, 100);
-
+            String input = scan.next();
             scan.nextLine();
 
             if (input.equals("1")) {
                 razorLeaf.calculateAccuracy();
                 if (razorLeaf.calculateAccuracy()) {
                     pokemon2.HP -= razorLeaf.getDamage();
-                    System.out.println(pokemon2 + " took " + razorLeaf.getDamage() + " damage!");
+                    System.out.println(pokemon2.name + " took " + razorLeaf.getDamage() + " damage!");
                 } else {
                     System.out.println("The attack missed!");
                 }
             }
 
             // after move input set player1Turn to false and player2Turn to true
-                player1Turn = false;
-                player2Turn = true;
+            player1Turn = false;
+            player2Turn = true;
         }
 
         while (player2Turn) {
+            String input = scan.next();
+
             BattleMenu battleMenu2 = new BattleMenu();
             battleMenu2.menu(pokemon2.name, pokemon2.HP, pokemon2.player);
 
-            move2.flamethrower(80, 70);
+            flamethrower.flamethrower(80, 70);
 
             if (input.equals("1")) {
-                move2.calculateAccuracy();
-                if (move2.calculateAccuracy()) {
-                    pokemon1.HP -= move2.getDamage();
-                    System.out.println(pokemon1 + " took " + move2.getDamage() + " damage!");
+                flamethrower.calculateAccuracy();
+                if (flamethrower.calculateAccuracy()) {
+                    pokemon1.HP -= flamethrower.getDamage();
+                    System.out.println(pokemon1.name + " took " + flamethrower.getDamage() + " damage!");
                 } else {
                     System.out.println("The attack missed!");
                 }
             }
+
+            player1Turn = true;
+            player2Turn = false;
 
         }
     }
