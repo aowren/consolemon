@@ -1,4 +1,3 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class GameLoop {
@@ -34,8 +33,6 @@ public class GameLoop {
                 // Create pokemon1 sprite
                 System.out.println(sprites.venusaurSprite);
 
-                //System.out.println("Go, " + pokemon1.name + "!");
-
                 // Initialize battle menu for player 1
                 BattleMenu battleMenu1 = new BattleMenu();
                 battleMenu1.menu(pokemon1.name, pokemon1.HP, pokemon1.player);
@@ -70,6 +67,7 @@ public class GameLoop {
                             System.out.println("The attack missed!");
                         }
                     }
+
                 } else {
                     System.out.println(pokemon1.name + " fainted!");
                     System.out.println("Player2 wins!");
@@ -83,7 +81,6 @@ public class GameLoop {
             while (player2Turn) {
 
                 System.out.println(sprites.charizardSprite);
-                //System.out.println("Go, " + pokemon2.name + "!");
 
                 BattleMenu battleMenu2 = new BattleMenu();
                 battleMenu2.menu(pokemon2.name, pokemon2.HP, pokemon2.player);
@@ -114,10 +111,11 @@ public class GameLoop {
                         if (rockslide.calculateAccuracy()) {
                             pokemon1.HP -= rockslide.getDamage();
                             System.out.println(pokemon1.name + " took " + rockslide.getDamage() + " damage!");
+                        } else {
+                            System.out.println("The attack missed!");
                         }
-                    } else {
-                        System.out.println("The attack missed!");
                     }
+
                 } else {
                     System.out.println(pokemon2.name + " fainted!");
                     System.out.println("Player1 wins!");
