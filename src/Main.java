@@ -4,6 +4,5 @@ public class Main {
 
         GameLoop gameLoop = new GameLoop();
         gameLoop.startBattle();
-
     }
 }

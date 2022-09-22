@@ -18,10 +18,10 @@ public class GameLoop {
         Pokemon pokemon2 = new Pokemon("Charizard", 180, "Player2");
 
         // Create move objects
-        Moves razorleaf = new Moves("Razor Leaf", 55, 100);
+        Moves razorleaf = new Moves("Razor Leaf", 40, 100);
         Moves bodyslam = new Moves ("Body Slam", 70, 80);
 
-        Moves flamethrower = new Moves("Flamethrower", 80, 70);
+        Moves flamethrower = new Moves("Flamethrower", 90, 70);
         Moves rockslide = new Moves("Rockslide", 60, 90);
 
         Sprites sprites = new Sprites();
