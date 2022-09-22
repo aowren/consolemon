@@ -8,7 +8,9 @@
 /dataSources.local.xml
 
 *.iws
+*.iml
 
 # IntelliJ
 out/
 .idea
+
