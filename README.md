@@ -3,7 +3,7 @@
 
 ![consolemon_demo_AdobeExpress](https://user-images.githubusercontent.com/57423395/191864242-0e1a1ea0-b177-4449-9ed8-7a47f731ce4e.gif)
 
-#About
+# About
 * This is meant to be a two player game.
 * Player1 gets Venusaur. Player2 gets Charizard.
 
